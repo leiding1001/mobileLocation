@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_margin="5dp"
+    android:background="@color/white_smoke"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:text="Lat" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" android:textColor="@color/black"
+        android:text="20150403 10:48:13" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1" android:textColor="@color/black"
+        android:text="Lng" />
+
+    <TextView
+        android:id="@+id/txt_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1" android:textColor="@color/black"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txt_lng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3" android:textColor="@color/black"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/txt_lat"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txt_date" android:textColor="@color/black"
+        android:text="Date:" />
+
+    <TextView
+        android:id="@+id/txt_accury"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_lng" android:textColor="@color/black"
+        android:layout_alignBottom="@+id/txt_lng"
+        android:layout_alignParentRight="true"
+        android:text="123.25" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_accury"
+        android:layout_alignBottom="@+id/txt_accury"
+        android:layout_toLeftOf="@+id/txt_accury" android:textColor="@color/black"
+        android:text="Accury:" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" android:textColor="@color/black"
+        android:layout_below="@+id/textView3"
+        android:text="Address:" />
+
+    <TextView
+        android:id="@+id/txt_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2" android:textColor="@color/black"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txt_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_accury" android:textColor="@color/black"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_toLeftOf="@+id/txt_from" android:textColor="@color/black"
+        android:text="from:" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textColor="@color/black"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:text="create time:" />
+
+    <TextView
+        android:id="@+id/creat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4" android:textColor="@color/black"
+        android:layout_toRightOf="@+id/textView4"
+        android:text="TextView" />
+
+</RelativeLayout>
