@@ -1,4 +1,4 @@
-package com.driver.gps.db;
+package com.driver.location.db;
 
 import java.util.Date;
 

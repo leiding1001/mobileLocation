@@ -1,4 +1,4 @@
-package com.driver.gps.db;
+package com.driver.location.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

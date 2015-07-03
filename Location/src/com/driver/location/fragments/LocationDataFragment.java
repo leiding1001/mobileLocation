@@ -1,4 +1,4 @@
-package com.driver.gps.fragments;
+package com.driver.location.fragments;
 
 import java.text.SimpleDateFormat;
 
@@ -18,11 +18,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.driver.gps.R;
-import com.driver.gps.R.id;
-import com.driver.gps.R.layout;
-import com.driver.gps.db._Location;
-import com.driver.gps.db._LocationTable;
+import com.driver.location.R;
+import com.driver.location.db._Location;
+import com.driver.location.db._LocationTable;
 
 public class LocationDataFragment extends SherlockFragment{
 

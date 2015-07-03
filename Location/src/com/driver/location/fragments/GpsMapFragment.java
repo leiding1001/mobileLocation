@@ -1,4 +1,4 @@
-package com.driver.gps.fragments;
+package com.driver.location.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +25,9 @@ import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.CoordinateConverter;
 import com.baidu.mapapi.utils.CoordinateConverter.CoordType;
-import com.driver.gps.R;
-import com.driver.gps.R.id;
-import com.driver.gps.R.layout;
-import com.driver.gps.db._Location;
-import com.driver.gps.db._LocationTable;
+import com.driver.location.R;
+import com.driver.location.db._Location;
+import com.driver.location.db._LocationTable;
 
 public class GpsMapFragment extends SherlockFragment {
 

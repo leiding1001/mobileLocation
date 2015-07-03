@@ -1,4 +1,4 @@
-package com.driver.gps;
+package com.driver.location;
 
 import android.app.Application;
 import android.content.BroadcastReceiver;

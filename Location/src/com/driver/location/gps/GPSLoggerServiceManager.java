@@ -26,7 +26,7 @@
  *   along with OpenGPSTracker.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.driver.gps;
+package com.driver.location.gps;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -35,6 +35,8 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+
+import com.driver.location.Constants;
 
 /**
  * Class to interact with the service that tracks and logs the locations
@@ -54,9 +56,18 @@ public class GPSLoggerServiceManager
     */
    private ServiceConnection mServiceConnection;
    private Runnable mOnServiceConnected; 
-   public GPSLoggerServiceManager(Context ctx)
-   {
-      ctx.startService(new Intent(Constants.SERVICENAME));
+   
+   private static GPSLoggerServiceManager mServiceManager ;
+   
+   static{
+	   mServiceManager = new GPSLoggerServiceManager() ;
+   }
+   
+   private GPSLoggerServiceManager(){
+   }
+   
+   public static final GPSLoggerServiceManager getIntance(){
+	   return mServiceManager ;
    }
    
    public int getLoggingState()
@@ -85,7 +96,7 @@ public class GPSLoggerServiceManager
    }
    
 
-   public long startGPSLogging( String name )
+   public long startGPSLogging()
    {
       synchronized (mStartLock)
       {
@@ -94,43 +105,6 @@ public class GPSLoggerServiceManager
             try
             {
                return this.mGPSLoggerRemote.startLogging();
-            }
-            catch (RemoteException e)
-            {
-               Log.e( TAG, "Could not start GPSLoggerService.", e );
-            }
-         }
-         return -1;
-      }
-   }
-
-   public void pauseGPSLogging()
-   {
-      synchronized (mStartLock)
-      {
-         if( mBound )
-         {
-            try
-            {
-               this.mGPSLoggerRemote.pauseLogging();
-            }
-            catch (RemoteException e)
-            {
-               Log.e( TAG, "Could not start GPSLoggerService.", e );
-            }
-         }
-      }
-   }
-
-   public long resumeGPSLogging()
-   {
-      synchronized (mStartLock)
-      {
-         if( mBound )
-         {
-            try
-            {
-               return this.mGPSLoggerRemote.resumeLogging();
             }
             catch (RemoteException e)
             {

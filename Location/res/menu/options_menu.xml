@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <menu xmlns:android="http://schemas.android.com/apk/res/android">
         <item 
-            android:id="@+id/settings_option_item"
-            android:title="Settings"/>
+            android:id="@+id/gps_state"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+            android:title="State"/>
+        <item
+            android:id="@+id/gps_start"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+            android:title="Start" 
+            />
+        <item
+            android:id="@+id/gps_stop"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+            android:title="Stop" 
+            />
+        <item
+            android:id="@+id/gps_startUp"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+            android:title="StartUp" 
+            />
+        <item
+            android:id="@+id/gps_shutdown"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+            android:title="Shutdown" 
+            />
     </menu>
